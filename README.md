@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cleo Frontend Interview
 ## Bills
 
@@ -28,3 +29,7 @@ Vodafone
 - Feel free to add LESS or SASS or even CSS.
 - Feel free to add tests for any components written.
 
+=======
+# cleo
+Cleo test
+>>>>>>> b72840a88169daafbd912a6fb23c5a4752a1b0cb
