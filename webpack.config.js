@@ -1,21 +1,28 @@
-var webpack = require('webpack');
-var path = require('path');
+var webpack = require("webpack");
+var path = require("path");
+var CleanWebpackPlugin = require("clean-webpack-plugin");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
-var APP_DIR = path.resolve(__dirname, 'src/client/app');
+var extractPlugin = new ExtractTextPlugin({
+  filename: "./assets/css/app.css"
+});
+
+var BUILD_DIR = path.resolve(__dirname, "src/client/public");
+var APP_DIR = path.resolve(__dirname, "src/client/app");
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: APP_DIR + "/index.jsx",
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: "bundle.js"
   },
-  module : {
-    loaders : [
+  module: {
+    loaders: [
       {
-        test : /\.jsx?/,
-        include : APP_DIR,
-        loader : 'babel-loader'
+        test: /\.jsx?/,
+        include: APP_DIR,
+        loader: "babel-loader"
       }
     ]
   }
